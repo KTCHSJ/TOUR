@@ -1,0 +1,264 @@
+/* HeaderStyle.css */
+.hero {
+  background-image: url('../../asset/hero-banner1.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: hsla(0, 0%, 0%, 0.7);
+  background-blend-mode: overlay;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 600px;
+  text-align: center;
+  padding-top: 80px; /* เพิ่มพื้นที่ด้านบนสำหรับ header-top */
+  position: relative;
+}
+
+.header-top {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* จัดเนื้อหาให้ตรงกลาง */
+  align-items: center; /* จัดให้ตรงกลางในแนวตั้ง */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.1);
+  padding: 1rem;
+  flex-direction: row; /* เรียงเนื้อหาในแนวนอน */
+}
+.header-top .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: flex-start;
+  align-items: center;
+}
+.hero {
+  min-height: 800px;
+  padding-top: 85px;
+}
+
+.hero-text { --fs-5: 15px; }
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: row; /* Ensure items are in a row */
+  align-items: center; /* Vertically center items */
+}
+.social-icon {
+  display: flex;
+  justify-content: center; 
+  gap: 1rem; 
+  margin-top: 1rem; 
+  margin-left: 10rem;
+}
+
+.social-icon .icon {
+  font-size: 1.5rem;
+  color: #fff; 
+  text-decoration: none;
+}
+
+.social-icon .icon:hover {
+  color: #00ff8c; 
+}
+.logo {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the text vertically */
+  margin-left: 1rem; /* Optional: Add margin if needed */
+  color: #fff; /* Optional: Adjust text color */
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 80px; /* Adjust this value based on header-top height */
+  left: 0;
+  z-index: 1;
+  text-transform: uppercase;
+  padding: 0; /* Ensure padding is set to 0 or adjusted as needed */
+  margin: 0; /* Ensure margin is set to 0 or adjusted as needed */
+}
+
+.nav-menu {
+  display: flex;
+}
+
+.nav-menu li {
+  padding: 0 1rem;
+}
+.nav-menu a {
+  text-decoration: none;
+  color: #fff; /* สีของลิงก์ปกติ */
+  transition: color 0.3s; 
+}
+
+.nav-menu a:hover {
+  color: rgb(106, 133, 255); 
+
+}
+
+.hamburger {
+  display: none;
+  position: absolute;
+  top: 1rem; /* Align with the top of the header-top */
+  right: 1rem; /* Align with the right side */
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  z-index: 3; /* Ensure it's on top */
+}
+
+@media screen and (max-width: 940px) {
+  .hero {
+    padding-top: 80px; /* Adjust padding-top to match header-top */
+  }
+
+  .header-top {
+    flex-direction: column;
+    align-items: center;
+  }
+.social-icon{
+  display: none !important;
+}
+  .navbar {
+    top: 80px; /* Adjust to fit below header-top */
+  }
+
+  .hamburger {
+    display: block;
+  }
+  .container {
+   margin-inline: auto;
+  }
+
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    top: -100vh;
+    left: 0;
+    position: absolute;
+    justify-content: space-between;
+    background-color: #f5f5f5;
+    transition: 0.3s;
+    color: #000;
+  }
+
+  .dark {
+    color: #000;
+  }
+
+  .active {
+    top: 80px;
+  }
+
+  .mobile-menu li {
+    padding: 1.2rem 1rem;
+    margin: 0 1rem;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .mobile-nav {
+    margin: 1rem 0;
+  }
+
+  .mobile-menu-bottom {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .social-icons {
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 0;
+  }
+
+  .social-icons .icon:hover {
+    transform: scale(1.5);
+    transition: 0.3s;
+  }
+
+  .mobile-menu button {
+    margin: 1rem;
+    width: 90%;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .nav-icons {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+@media screen and (max-width: 480px) {
+
+  .header-top {
+
+    padding: 0.5rem;
+
+  }
+
+
+
+  .helpline-box, .logo, .social-icons {
+
+    flex-direction: column;
+
+    align-items: center;
+
+  }
+
+
+
+  .helpline-title, .helpline-number {
+
+    text-align: center;
+
+  }
+
+
+
+  .logo img {
+
+    height: 30px; /* Adjust the size for smaller screens */
+
+  }
+
+
+
+  .social-icons .icon {
+
+    margin: 0.2rem;
+
+    font-size: 1.2rem; /* Adjust the size for smaller screens */
+
+  }
+
+}
+
