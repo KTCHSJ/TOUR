@@ -32,6 +32,18 @@ const Header = () => {
         </div>
       </div>
       <Navbar />
+      <section className="hero-content" id="home">
+      <div className="container">
+        <h2 className="h1 hero-title">
+          Hello world<br />Welcome to<br/> explore world
+        </h2>
+        <p className="hero-text">
+          เราไม่ทำงาน multitask เราไม่ทำงาน multitask เราไม่ทำงาน multitask เราไม่ทำงาน multitask เราไม่ทำงาน multitask เราไม่ทำงาน multitask 
+          เราไม่ทำงาน multitask เราไม่ทำงาน multitask เราไม่ทำงาน multitask เราไม่ทำงาน multitask เราไม่ทำงาน multitask เราไม่ทำงาน multitask 
+          เราไม่ทำงาน multitask เราไม่ทำงาน multitask เราไม่ทำงาน multitask เราไม่ทำงาน multitask เราไม่ทำงาน multitask เราไม่ทำงาน multitask 
+        </p>
+      </div>
+    </section>
     </header>
   );
 };
